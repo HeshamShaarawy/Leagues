@@ -23,4 +23,4 @@ A Team has many players/ A player belong to one Team
 
 ## Wireframes
 here is sample of the wire frames of the three main pages: matches, teams and courts.
-![wireframe](./images/wireframe.png)
+![wireframe](./images/Wireframe.png)
