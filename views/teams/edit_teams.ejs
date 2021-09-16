@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+<h4> Edit Team Information</h4>
+
+<form action ="/teams/<%=team.id%>"?_method=PUT method="post" class="uk-form-stacked">
+    <label> Team Name: 
+        <input type="text" name="name" value="<%=team.name%>" >
+    </label>
+    <br>
+    <label> About the team: 
+        <textarea type="text" name="aboutTeam" value="<%=team.aboutTeam%>"  rows="5" class="uk-textarea"></textarea>
+    </label>
+    <button type="submit" class="uk-button uk-button-primary">Save</button>
+</form>
+
+
+<%- include('../partials/footer')%>

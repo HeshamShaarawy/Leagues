@@ -1,0 +1,44 @@
+<%- include('../partials/header') %>
+
+<h4><%= team.name%></h4>
+<%= console.log(team)%>
+<p><%= team.aboutTeam%></p>
+
+<a href="/teams/edit/<%= team.id%>/">Edit Team</a>
+
+<h4> Players of this team</h4>
+<p><%= console.log(team.players , "players names") %></p>
+<table>
+    <thread>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>actions</th>
+             
+        </tr>
+    </thread>
+     <tbody>
+         
+        <% team.players.forEach(p => { %>
+        <tr>
+            <td><%= p.name %></td>
+            <td><%= p.age %> </td>
+            <td><a href="/teams/deleteplayer/<%= team.id%>/<%= p.id%>">delete</a></td>
+        </tr>
+            <% }) %>   
+    </tbody>
+</table>
+
+
+<h4> Add Player to this team</h4>
+<form action ="/teams/<%=team.id%>/players" method="post">
+    <label> Player Name: 
+        <input type="text" name="name">
+    </label>
+    <label> Player Age:
+        <input type="number" name="age">
+    </label>
+    <button type="submit" class="uk-button uk-button-primary">Add Player</button>
+</form>
+
+<%- include('../partials/footer') %>

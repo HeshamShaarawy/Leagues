@@ -1,0 +1,18 @@
+<%- include('../partials/header')%>
+
+<h4>Add New Court</h4>
+<form action="/courts" method="POST" class="uk-form-stacked">
+    <label class="uk-form-label"> location
+        <input type="text" name="location" class="uk-input">
+    </label>
+    <label class="uk-form-label"> Court Type: 
+        <select name="courtType" class="uk-select">
+            <option value="Beach" selected> Sand/beach courts</option>
+            <option value="Gym"> Indoor Gym/School courts</option>
+            <option value="Grass"> Grass court</option>
+        </select>
+    </label>
+    <button type="submit" class="uk-button uk-button-primary">Submit</button>
+</form>
+
+<%- include('../partials/footer')%>

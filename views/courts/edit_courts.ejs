@@ -1,0 +1,24 @@
+<%- include('../partials/header')%>
+
+<h4>Edit Court</h4>
+
+<form action="/courts/<%= court.id%>?_method=PUT" method="POST" class="uk-form-stacked">
+    <label> location
+        <br>
+        <input type="text" name="location" value="<%= court.location%>"  class="uk-input">
+    </label>
+    <label> Court Type: <%= court.courtType %> change to: 
+        <select name="courtType" default="<%= court.courtType %>"  class="uk-select">
+            <option value="Beach"> Sand/beach courts</option>
+            <option value="Gym"> Indoor Gym/School courts</option>
+            <option value="Grass"> Grass court</option>
+        </select>
+       
+        
+    </label>
+    <button type="submit" class="uk-button uk-button-primary" value="ok">Save</button>
+</form>
+
+
+
+<%- include('../partials/footer') %>

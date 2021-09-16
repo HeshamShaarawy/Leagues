@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+<h4> Registered Teams </h4>
+<div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+<% teams.forEach(function(t) { %>
+    <div class="uk-card uk-card-default uk-card-body uk-card-hover">
+        <h3 class="uk-card-title"><%= t.name %></h3>
+        <p><%= t.aboutTeam %></p>
+        <div class="uk-card-footer">
+            <a href="/teams/edit/<%= t.id%>/" class="card-link">Edit Team</a>
+            <a href="/teams/<%= t.id%>/" class="card-link">View/Add Players</a>
+            <a href="/teams/delete/<%= t.id%>/" class="card-link">Delete Team</a>
+        </div>
+    </div>
+
+<% }) %>
+</div>
+<%- include('../partials/footer') %>

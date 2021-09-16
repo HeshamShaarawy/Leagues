@@ -1,0 +1,73 @@
+<%- include('../partials/header')%>
+    
+<button onclick="toggleClass()">Add Match</button> <form id="matchform" class="appear" action="/matches/addMatch" method="POST">
+        <label> Date
+            <input type="datetime-local" name="date"  %> >
+        </label>
+        <label> Court : 
+            <select name="court" >
+                <% courts.forEach(function(c) { %>
+                <% console.log(c) %>
+                <option value="<%= c._id %>"> court: <%= c.location %> - <%c.courtType%> </option>
+                <% console.log(c) %>
+                <% }) %>
+            </select>
+        </label>
+        <label> Home Team
+            <select name="team1">
+                <% teams.forEach(function(t){ %>
+                    <option value="<%=t._id%>">team : <%=t.name%></option>
+                <% }) %>
+            </select>
+        </label>
+        <label> Away Team
+            <select name="team2">
+                <% teams.forEach(function(t){ %>
+                    <option value="<%=t._id%>">team : <%=t.name%></option>
+                <% }) %>
+            </select>
+        </label>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+        <thead>
+            <tr>
+                <th>Date </th>
+                <th>Time</th> 
+                 <th>Location</th>
+                 <th>Home Team</th>
+                 <th>Away Team</th> 
+                 <th>update</th> 
+                 <th>Delete</th>   
+            </tr>
+        </thead>
+        <tbody>
+            <% matches.forEach(function(m) { %>
+            <tr>
+                <td><%= m.date.toISOString().slice(0, 10) %></td>
+                <td><%= m.date.toISOString().slice(11, 16) %></td>
+                <td><%= m.court[0].location  %> </td>
+                <td><a href="/teams/<%= m.team1[0]._id%>"> <%= m.team1[0].name %> </a></td>
+                <td><a href="/teams/<%= m.team2[0]._id%>"> <%= m.team2[0].name %>  </a></std>
+                <td><a  href="/matches/edit/<%=  m.id %>"  >Edit </a></td>
+                <td><a  href="/matches/delete/<%=  m.id %>"> Delete </a></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <style> 
+        .appear {
+            display:none
+        }
+    </style>
+    <script>
+         function toggleClass(){
+            document.getElementById('matchform').classList.toggle('appear')
+         }
+    
+
+    </script>
+    
+
+    <%- include('../partials/footer')%>

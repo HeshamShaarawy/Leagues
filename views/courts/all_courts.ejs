@@ -1,0 +1,24 @@
+<%- include('../partials/header') %>
+<table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+    <thead>
+        <tr>
+            <th>Court Location</th> 
+             <th>Court Type</th>    
+        </tr>
+    </thead>
+    <tbody>
+        <% courts.forEach(function(c) { %>
+        <tr>
+            <td><%=c.location %></td>
+            <td><%=c.courtType %> </td>
+            <td><a  href="/courts/edit/<%= c.id %>"  >Edit </a></td>
+            
+            <td><form method="POST" action="/courts/delete/<%= c.id %>?_method=DELETE"><button class="uk-button-link uk-button-danger" type="submit">Delete</button></form>
+            </td>
+        </tr>
+        <% }) %>
+    </tbody>
+</table>
+
+
+<%- include('../partials/footer') %>

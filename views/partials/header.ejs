@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit-icons.min.js"></script>
+
+
+<nav class="uk-navbar-container" uk-navbar>
+  <div class="uk-navbar-left">
+
+      <ul class="uk-navbar-nav">
+          <li class="uk-active"><a href="\">Home</a></li>
+          <li class="uk-active">
+            <a href="/matches">Matches</a>
+            <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li><a href="\matches\"> View All Matches</a></li>
+                <li><a href="\matchs\new">Add A match</a></li>
+              </ul>
+            </div>
+          </li>
+         
+          <li>
+            <a href="/teams">Teams</a>
+            <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li><a href="\teams\"> View All Teams</a></li>
+                <li><a href="\teams\new">Add A Team</a></li>
+              </ul>
+            </div>
+          </li>
+          
+          <li>
+            <a href="/courts">Courts</a>
+            <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li><a href="\courts\"> View All Courts</a></li>
+                <li><a href="\courts\new">Add A Court</a></li>
+              </ul>
+            </div>
+          </li>
+          
+      </ul>
+
+  </div>
+  <div class="uk-navbar-right">
+    <li>
+      <% if (user) { %>
+        <a href="/logout" uk-icon:"icon: sign-out">Log Out</a>
+      <% } else { %>
+        <a href="/auth/google"  class="uk-icon-button" uk-icon="google"></a>
+      <% } %>
+      </li>
+  </div>
+</nav>

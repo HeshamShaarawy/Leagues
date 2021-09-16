@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+<h4> Add Team</h4>
+
+<form action ="/teams" method="post" class="uk-form-stacked">
+    <label> Team Name: 
+        <input type="text" name="name" class="uk-form-width-large">
+    </label>
+    <label> About the team: 
+        <input type="text" name="aboutTeam" rows="5" class="uk-textarea">
+    </label>
+    <button type="submit" class="uk-button uk-button-primary">Add Team</button>
+</form>
+
+
+<%- include('../partials/footer') %>
