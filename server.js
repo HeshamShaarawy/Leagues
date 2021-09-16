@@ -51,7 +51,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-//app.use('/courts', courtsRouter);
+app.use('/courts', courtsRouter);
 app.use('/teams', teamsRouter)
 app.use('/matches', matchesRouter)
 // catch 404 and forward to error handler
