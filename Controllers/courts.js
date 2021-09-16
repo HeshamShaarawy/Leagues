@@ -1,4 +1,5 @@
-const Court = require('../models/court')
+const Court = require('../models/court');
+
 
  function showAll(req,res){
     Court.find(function(err,courts){
