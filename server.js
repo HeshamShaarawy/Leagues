@@ -9,7 +9,7 @@ var methodOverride = require('method-override');
 const session = require('express-session')
 const passport = require('passport')
 // load the env vars
-//require('dotenv').config();
+require('dotenv').config();
 
 //connect to the database with Mongoose
 require('./config/database');
@@ -51,7 +51,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/courts', courtsRouter);
+//app.use('/courts', courtsRouter);
 app.use('/teams', teamsRouter)
 app.use('/matches', matchesRouter)
 // catch 404 and forward to error handler
