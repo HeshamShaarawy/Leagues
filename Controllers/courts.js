@@ -41,7 +41,7 @@ function update(req,res) {
    })
 }
 
-module.exports= {
+module.exports = {
     showAll,
     new: newCourt,
     create,
