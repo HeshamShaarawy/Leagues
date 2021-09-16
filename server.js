@@ -9,7 +9,7 @@ var methodOverride = require('method-override');
 const session = require('express-session')
 const passport = require('passport')
 // load the env vars
-require('dotenv').config();
+//require('dotenv').config();
 
 //connect to the database with Mongoose
 require('./config/database');
