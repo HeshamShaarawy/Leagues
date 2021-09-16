@@ -25,10 +25,7 @@ function deleteCourt(req,res){
         res.redirect('/courts')
     }) 
 }
-    
-
-
-
+   
 function edit(req,res){
     Court.findById({_id: req.params.id}, function(err,court){
         if(err) console.log(err);
