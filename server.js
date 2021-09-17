@@ -34,13 +34,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+app.use(passport.initialize());
+app.use(passport.session())
+
 app.use(session({
    secret: 'SEIRocks',
    resave: false,
   saveUninitialized: true
 }))
-app.use(passport.initialize());
-app.use(passport.session())
+
 
 app.use(function (req, res, next) {
   res.locals.user = req.user;
