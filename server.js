@@ -1,7 +1,7 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
+//var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
 
@@ -9,7 +9,7 @@ var methodOverride = require('method-override');
 const session = require('express-session')
 const passport = require('passport')
 // load the env vars
-require('dotenv').config();
+// require('dotenv').config();
 
 //connect to the database with Mongoose
 require('./config/database');
@@ -31,20 +31,20 @@ app.set('view engine', 'ejs');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+// app.use(cookieParser());
 
-app.use(session({
-  secret: 'SEIRocks',
-  resave: false,
-  saveUninitialized: true
-}))
-app.use(passport.initialize());
-app.use(passport.session())
+// app.use(session({
+//   secret: 'SEIRocks',
+//   resave: false,
+//   saveUninitialized: true
+// }))
+// app.use(passport.initialize());
+// app.use(passport.session())
 
-app.use(function (req, res, next) {
-  res.locals.user = req.user;
-  next();
-});
+// app.use(function (req, res, next) {
+//   res.locals.user = req.user;
+//   next();
+// });
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
