@@ -50,11 +50,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/courts', courtsRouter);
-app.use('/teams', teamsRouter);
-app.use('/matches', matchesRouter)
+// app.use('/users', usersRouter);
+// app.use('/teams', teamsRouter);
+// app.use('/matches', matchesRouter)
 // catch 404 and forward to error handler
+// app.use('/courts', courtsRouter);
+
 app.use(function(req, res, next) {
   next(createError(404));
 });
