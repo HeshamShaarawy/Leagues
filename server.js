@@ -9,7 +9,7 @@ var methodOverride = require('method-override');
 const session = require('express-session')
 const passport = require('passport')
 // load the env vars
-require('dotenv').config();
+// require('dotenv').config();
 
 //connect to the database with Mongoose
 require('./config/database');
@@ -34,14 +34,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(passport.initialize());
-app.use(passport.session())
+// app.use(passport.initialize());
+// app.use(passport.session())
 
-app.use(session({
-   secret: 'SEIRocks',
-   resave: false,
-  saveUninitialized: true
-}))
+// app.use(session({
+//    secret: 'SEIRocks',
+//    resave: false,
+//   saveUninitialized: true
+// }))
 
 
 app.use(function (req, res, next) {
@@ -53,10 +53,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
-app.use('/matches', matchesRouter);
-app.use('/users', usersRouter);
-app.use('/teams', teamsRouter);
-app.use('/courts', courtsRouter);
+// app.use('/matches', matchesRouter);
+// app.use('/users', usersRouter);
+// app.use('/teams', teamsRouter);
+// app.use('/courts', courtsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
