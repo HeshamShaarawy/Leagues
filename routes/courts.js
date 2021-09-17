@@ -1,6 +1,6 @@
 var express = require('express')
 var router = express.Router();
-const courtCtrl = require('../controllers/Kourts')
+const courtCtrl = require('../controllers/courts')
 
 router.get('/', courtCtrl.showAll) 
 router.get('/new', courtCtrl.new)
