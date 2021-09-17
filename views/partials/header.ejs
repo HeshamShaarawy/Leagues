@@ -53,11 +53,12 @@
 
   </div>
   <div class="uk-navbar-right">
-    Log in using:
+ 
     <li>
       <% if(user) { %>
         <a href="/logout" uk-icon:"icon: sign-out">Log Out</a>
       <% } else { %>
+        Log in using:
         <a href="/auth/google"  class="uk-icon-button" uk-icon="google"></a>
       <% } %>
       </li>

@@ -1,13 +1,14 @@
-# Project 2:
+# Project: Sport League.
 # Full-stack CRUD Application
 
 # Sports-League: Match board
-
+deployed at: https://sportleague.herokuapp.com/
+database: MongoDB Atlas on Azure
 ## About:
 This app is for sports league coordination. Intended to be used by the administrator of the league, coaches and players to have a grib on the matches schedule: when and where teams are playing. 
 
 ## Technologies used:
-HTML, CSS, JavaScript, Node.js, Express.js, MongoDB, UIkit, Google Oauth, AJAX, API
+HTML, CSS, JavaScript, Node.js, Express.js, MongoDB, UIkit, Google Oauth2, AJAX, API
 
 
  ## user Stories:
