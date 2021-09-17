@@ -3,8 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "bower install && grunt build",
-    "start": "nf start",
     "start": "node ./bin/www"
   },
   "dependencies": {
