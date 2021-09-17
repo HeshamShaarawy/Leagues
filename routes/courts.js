@@ -9,7 +9,4 @@ router.delete('/delete/:id', courtCtrl.delete);
 router.get('/edit/:id', courtCtrl.edit);
 router.put('/:id', courtCtrl.update)
 
-
-
-
 module.exports = router
