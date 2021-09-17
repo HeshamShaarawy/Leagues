@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "build": "bower install && grunt build",
+    "start": "nf start",
     "start": "node ./bin/www"
   },
   "dependencies": {
@@ -19,5 +21,19 @@
     "morgan": "~1.9.1",
     "passport": "^0.4.1",
     "passport-google-oauth": "^2.0.0"
-  }
+  },
+  "description": "This app is for sports league coordination. Intended to be used by the administrator of the league, coaches and players to have a grib on the matches schedule: when and where teams are playing.",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeshamShaarawy/Leagues.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HeshamShaarawy/Leagues/issues"
+  },
+  "homepage": "https://github.com/HeshamShaarawy/Leagues#readme"
 }
