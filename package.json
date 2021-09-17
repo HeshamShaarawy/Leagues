@@ -2,6 +2,7 @@
   "name": "sportleague",
   "version": "0.0.0",
   "private": true,
+  "engines": {"node":"16.4"},
   "scripts": {
     "start": "node ./bin/www"
   },
