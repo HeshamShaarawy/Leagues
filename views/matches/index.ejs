@@ -7,9 +7,9 @@
         <label> Court : 
             <select name="court" >
                 <% courts.forEach(function(c) { %>
-                <% console.log(c) %>
+                
                 <option value="<%= c._id %>"> court: <%= c.location %> - <%c.courtType%> </option>
-                <% console.log(c) %>
+               
                 <% }) %>
             </select>
         </label>
