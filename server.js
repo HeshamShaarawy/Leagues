@@ -18,9 +18,9 @@ require('./config/database');
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var courtsRouter = require('./routes/courts');
-var teamsRouter = require('./routes/teams');
+// var usersRouter = require('./routes/users');
+// var courtsRouter = require('./routes/courts');
+// var teamsRouter = require('./routes/teams');
 var matchesRouter = require('./routes/matches');
 var app = express();
 
@@ -50,8 +50,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/teams', teamsRouter);
+// app.use('/users', usersRouter);
+// app.use('/teams', teamsRouter);
 app.use('/matches', matchesRouter);
 
 // app.use('/courts', courtsRouter);
