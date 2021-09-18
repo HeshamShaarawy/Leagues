@@ -38,7 +38,7 @@ app.use(passport.initialize());
 app.use(passport.session())
 
 app.use(session({
-   secret: 'SEIRocks',
+   secret: 'Sports1wdvgy8123_090909',
    resave: false,
   saveUninitialized: true
 }))
@@ -73,7 +73,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 
 
 module.exports = app;
