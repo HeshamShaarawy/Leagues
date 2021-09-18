@@ -22,6 +22,7 @@ var usersRouter = require('./routes/users');
 var courtsRouter = require('./routes/courts');
 var teamsRouter = require('./routes/teams');
 var matchesRouter = require('./routes/matches');
+var apiRouter = require('./routes/api')
 
 var app = express();
 
@@ -38,7 +39,7 @@ app.use(passport.initialize());
 app.use(passport.session())
 
 app.use(session({
-   secret: 'SEIRocks',
+   secret: 'Sports1wdvgy8123_090909',
    resave: false,
   saveUninitialized: true
 }))
@@ -57,6 +58,7 @@ app.use('/matches', matchesRouter);
 app.use('/users', usersRouter);
 app.use('/teams', teamsRouter);
 app.use('/courts', courtsRouter);
+app.use('/api', apiRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -73,7 +75,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 
 
 module.exports = app;

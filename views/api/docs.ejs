@@ -1,0 +1,16 @@
+<%- include('../partials/header')%>
+
+<h4>How to use the API</h4>
+
+<p>this API is intended to enable access to the matches scheduled: </p>
+
+    <h5>To get matches schedule as json file:</h5>
+    <p> send a get request to </p>
+    <p> https://sportleague.herokuapp.com/api/matches </p>
+    <P>Here is a sample result of one match: <br>
+        [{"_id":"6143b21cdcfab6399ad24de3","team1":[{"_id":"6143ad24dcfab6399ad24daa","name":"Smash Hits","aboutTeam":"Mississauga native team, with decent volleyball skills. They excel in hits.","players":[{"name":"Anna","age":24,"_id":"6143b1cfdcfab6399ad24dcc","createdAt":"2021-09-16T21:06:23.859Z","updatedAt":"2021-09-16T21:06:23.859Z"},{"name":"Arnold","age":23,"_id":"6143b1d9dcfab6399ad24dd2","createdAt":"2021-09-16T21:06:33.822Z","updatedAt":"2021-09-16T21:06:33.822Z"}],"createdAt":"2021-09-16T20:46:28.671Z","updatedAt":"2021-09-18T18:29:59.009Z","__v":4}],"team2":[{"_id":"6143adb0dcfab6399ad24dad","name":"Titians Volleyball team","aboutTeam":"This team is best known by being very tall players, thus the name Titians.","players":[],"createdAt":"2021-09-16T20:48:48.821Z","updatedAt":"2021-09-16T20:48:48.821Z","__v":0}],"court":[{"_id":"6143ab15dcfab6399ad24da5","location":"Huron Park Indoors","courtType":"Gym","createdAt":"2021-09-16T20:37:41.222Z","updatedAt":"2021-09-16T20:37:41.222Z","__v":0}],"date":"2022-04-19T12:00:00.000Z","createdAt":"2021-09-16T21:07:40.946Z","updatedAt":"2021-09-16T21:07:40.946Z","__v":0},
+    
+    </P> 
+
+
+<%- include('../partials/footer')%>
