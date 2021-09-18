@@ -53,7 +53,17 @@
 
   </div>
   <div class="uk-navbar-right">
- 
+    <ul class="uk-navbar-nav">
+      <li class="uk-active">
+        <a href="/api">API</a>
+        <div class="uk-navbar-dropdown">
+          <ul class="uk-nav uk-navbar-dropdown-nav">
+            <li><a href="\api\"> Documentation</a></li>
+            <li><a href="\api\matches">matches schedule in JSON format</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
     <li>
       <% if(user) { %>
         <a href="/logout" uk-icon:"icon: sign-out">Log Out</a>
