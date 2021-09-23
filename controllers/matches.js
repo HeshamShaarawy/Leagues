@@ -27,12 +27,10 @@ async function deleteMatch(req,res){
 }
 
 async function editMatch(req,res){
-    const match = await Match.findById(req.params.matchID)
+    const match = await Match.findById(req.params.matchID).populate(['team1', 'team2', 'court'])
     const courts = await  Court.find({})
     const teams =  await Team.find({})
-    Match.find({}).populate(['team1', 'team2', 'court']).exec(function(err, matches){
-    res.render('matches/index',{courts, teams, matches, match})
-    })
+    res.render('matches/edit_match',{courts, teams, match})
 }
 
 
