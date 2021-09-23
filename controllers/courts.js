@@ -8,7 +8,7 @@ const Court = require('../models/court');
 }
 
 function newCourt(req,res){
-    res.render('courts/add_Courts')
+    res.render('courts/add_courts')
 }
 
 function create(req,res){
