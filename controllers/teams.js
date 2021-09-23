@@ -2,14 +2,12 @@ const Team = require('../models/team')
 
 
 function showAll(req,res){
-    console.log("show All")
     Team.find(function(err,teams){
     res.render('teams/all_teams', {teams})
     })
 }
 
 async function show(req,res){
-    console.log("async function show")
     const team = await Team.findById(req.params.id) 
      //const player = team.player.slice().sort((a, b) => a.age - b.age);
      res.render('teams/team_details',{team})
@@ -57,17 +55,6 @@ async function addPlayer(req,res){
     res.redirect(`/teams/${team.id}`)
 }
 
-// function createPlayer(req,res){
-//     console.log("create PLayer function")
-//     const teamId = req.params.id;
-//     const player = new Player(req.body)
-//     player.team = teamId
-//     console.log(player, "this is createPLaye function and that is player var")
-//     player.save(function(err){
-//     console.log(err)
-//     res.redirect(`/teams/${teamId}`)
-//     }) 
-// };
 
  async  function deletePlayer (req,res){
         const playerId = req.params.playerId

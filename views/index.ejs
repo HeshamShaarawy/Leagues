@@ -4,18 +4,69 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit-icons.min.js"></script>
+
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-   
-
-    <a href="\matches\"> View All Matches</a>
-
-    <br>
-
-
-   <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wy2rzdHVOMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h1 class="uk-heading-line uk-text-center"><span>Sports League</span></h1>
+      <div class="uk-position-center-left" style="margin: 30px;"> 
+      <div class="uk-flex uk-flex-center">
+        <div>
+          <div>Now the weather is: <%= weather.weather[0].main %>: <%= weather.weather[0].description %></div>
+          <div style="font-size: medium; font-weight: bold; margin-bottom: 0px;"><%= weather.name%></div> 
+          <div style="float: left; width: 130px;"> 
+            <div style="display: block; clear: left;"> 
+              <div style="float: left;" title="Titel"> 
+                <img height="45" width="45" style="border: medium none; width: 45px; height: 45px; background: url(&quot;http://openweathermap.org/img/w/<%=weather.weather[0].icon %>.png&quot;) repeat scroll 0% 0% transparent;" alt="title" src="http://openweathermap.org/images/transparent.png"/>
+              </div>
+              <div style="float: left;"> 
+                <div style="display: block; clear: left; font-size: medium; font-weight: bold; padding: 0pt 3pt;" title="Current Temperature"><%= weather.main.temp%>°C</div>
+                <div style="display: block; width: 85px; overflow: visible;"></div> 
+              </div> 
+            </div> 
+            <div style="display: block; clear: left; font-size: small;">Clouds: <%= weather.clouds.all%>%</div> 
+            <div style="display: block; clear: left; color: gray; font-size: x-small;" >Humidity: <%= weather.main.humidity %>%</div> 
+            <div style="display: block; clear: left; color: gray; font-size: x-small;" >Wind: <%= weather.main.humidity %> m/s</div> 
+            <div style="display: block; clear: left; color: gray; font-size: x-small;">Feels like:<%= weather.main.feels_like%> 'C</div>
+            <div style="display: block; clear: left; color: gray; font-size: x-small;">Max Temp:<%= weather.main.temp_max%> 'C</div>
+            <div style="display: block; clear: left; color: gray; font-size: x-small;">Min Temp:<%= weather.main.temp_min%> 'C</div>
+          </div>
+        </div>
+      </div>
+    </div>   
+    </div>
     
+  
+    
+ 
+      <div class="uk-position-center">
+        <iframe  width="560" height=315 src="https://www.youtube-nocookie.com/embed/wy2rzdHVOMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+
+  <div class="uk-position-bottom-center">
+    <p uk-margin >
+      <a class="uk-button uk-button-primary" href=".\matches">Go to Matches Schedules</a> 
+      
+  
+    </p>
+  </div>
+  <div class="uk-position-top-center">
+
+    <div uk-lightbox>
+      <a class="uk-button uk-button-default" href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/143679647&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true" data-caption="soundcloud" data-type="iframe">Play Music</a>
+      <a class="uk-button uk-button-default" href="https://www.fivb.com/en/beachvolleyball/thegame_bvb_glossary" data-caption="FIVB" data-type="iframe">About the Beach VolleyBall Game</a>
+      <a class="uk-button uk-button-default" href="/auth/google" data-caption="Google Auth" data-type="iframe" class="uk-icon-button uk-icon="google">Log in with Google</a>
+      <a class="uk-button uk-button-default" href="./matches/"data-caption="openweathermap" data-type="iframe">Quick view of matches</a>
+      <a class="uk-button uk-button-default" href="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d49834.1976685392!2d-79.65044354698192!3d43.58769227777918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sBeach%20Volleyball!5e0!3m2!1sen!2sca!4v1632410049326!5m2!1sen!2sca" data-caption="Google Maps" data-type="iframe">Google Maps</a>
+  </div>
+  </div>
+    
+
   </body>
 </html>
+

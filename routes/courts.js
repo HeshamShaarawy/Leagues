@@ -1,8 +1,7 @@
 var express = require('express')
-var router = express.Router();
- 
+var router = express.Router(); 
 var courtCtrl = require('../controllers/courts');
-
+const passport = require('passport');
 
 router.get('/', courtCtrl.showAll);
 router.get('/new', courtCtrl.new);

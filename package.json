@@ -2,7 +2,6 @@
   "name": "sportleague",
   "version": "0.0.0",
   "private": true,
-  "engines": {"node":"16.4"},
   "scripts": {
     "start": "node ./bin/www"
   },
@@ -19,10 +18,11 @@
     "mongoose": "^6.0.3",
     "morgan": "~1.9.1",
     "passport": "^0.4.1",
-    "passport-google-oauth": "^2.0.0"
+    "passport-google-oauth": "^2.0.0",
+    "unirest": "^0.6.0"
   },
   "description": "This app is for sports league coordination. Intended to be used by the administrator of the league, coaches and players to have a grib on the matches schedule: when and where teams are playing.",
-  "main": "server.js",
+  "main": "./bin/www",
   "devDependencies": {},
   "repository": {
     "type": "git",

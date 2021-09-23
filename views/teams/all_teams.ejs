@@ -1,6 +1,7 @@
 <%- include('../partials/header') %>
 <h4> Registered Teams </h4>
-<div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+<div uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 500">
+<div class="uk-child-width-1-4@s uk-grid-match" uk-grid>
 <% teams.forEach(function(t) { %>
     <div class="uk-card uk-card-default uk-card-body uk-card-hover">
         <h3 class="uk-card-title"><%= t.name %></h3>
@@ -13,5 +14,6 @@
     </div>
 
 <% }) %>
+</div>
 </div>
 <%- include('../partials/footer') %>

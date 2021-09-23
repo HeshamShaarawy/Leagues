@@ -22,6 +22,7 @@ var usersRouter = require('./routes/users');
 var courtsRouter = require('./routes/courts');
 var teamsRouter = require('./routes/teams');
 var matchesRouter = require('./routes/matches');
+var weatherRouter = require('./routes/weather')
 var apiRouter = require('./routes/api')
 
 var app = express();
@@ -35,20 +36,21 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(passport.initialize());
-app.use(passport.session())
-
 app.use(session({
-   secret: 'Sports1wdvgy8123_090909',
-   resave: false,
-  saveUninitialized: true
+  secret: 'Sports1wdvgy8123_090909',
+  resave: false,
+ saveUninitialized: true
 }))
 
-
+app.use(passport.initialize());
+app.use(passport.session())
 app.use(function (req, res, next) {
-  res.locals.user = req.user;
+res.locals.user = req.user;
+ // console.log(res.locals.user, req.user, "this the app use user.")
   next();
 });
+
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
@@ -58,6 +60,7 @@ app.use('/matches', matchesRouter);
 app.use('/users', usersRouter);
 app.use('/teams', teamsRouter);
 app.use('/courts', courtsRouter);
+app.use('/weather', weatherRouter)
 app.use('/api', apiRouter)
 
 // catch 404 and forward to error handler

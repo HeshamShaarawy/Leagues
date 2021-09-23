@@ -64,9 +64,12 @@
         </div>
       </li>
     </ul>
+    
     <li>
       <% if(user) { %>
+        Welcome <%= user.name%>
         <a href="/logout" uk-icon:"icon: sign-out">Log Out</a>
+
       <% } else { %>
         Log in using:
         <a href="/auth/google"  class="uk-icon-button" uk-icon="google"></a>
