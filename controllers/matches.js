@@ -33,10 +33,17 @@ async function editMatch(req,res){
     res.render('matches/edit_match',{courts, teams, match})
 }
 
+function updateMatch(req,res) {
+    Match.updateOne({_id: req.params.id}, req.body, function(err){
+         if(err) console.log(err)
+         res.redirect('/matches')
+    })
+ }
 
 module.exports = {
 showAll,
 addMatch,
 deleteMatch,
-editMatch
+editMatch,
+updateMatch
 }

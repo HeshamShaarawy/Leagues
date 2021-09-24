@@ -23,7 +23,7 @@
         <tr>
             <td><%= p.name %></td>
             <td><%= p.age %> </td>
-            <td><a href="/teams/deleteplayer/<%= team.id%>/<%= p.id%>">delete</a></td>
+            <td><form method="POST" action="/teams/deleteplayer/<%= team.id%>/<%= p.id%>?_method=DELETE"><button type="submit">delete</form></td>
         </tr>
             <% }) %>   
     </tbody>

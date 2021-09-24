@@ -25,3 +25,9 @@ A Team has many players/ A player belong to one Team
 ## Wireframes
 here is sample of the wire frames of the three main pages: matches, teams and courts.
 ![wireframe](./images/Wireframe.png)
+
+## Features
+### The home page:
+The homepage has a live weather information for the city of mississauga showing information including weather status, temp, wind.. etc
+
+The top of the page have lighthouse buttons giving the user quick access to selective resources needed during the games: Play Music, quick acccess to volleyball association website, view of the matches schedule and maps

@@ -16,24 +16,26 @@
       <div class="uk-position-center-left" style="margin: 30px;"> 
       <div class="uk-flex uk-flex-center">
         <div>
-          <div>Now the weather is: <%= weather.weather[0].main %>: <%= weather.weather[0].description %></div>
-          <div style="font-size: medium; font-weight: bold; margin-bottom: 0px;"><%= weather.name%></div> 
-          <div style="float: left; width: 130px;"> 
+          
+          <p>Live weather data: <br>empowered by openweathermap API</p>  
+          <div style="font-size: large; font-weight: bold; margin-bottom: 0px;"><%= weather.name%></div> 
+          <div >Now the weather is:<br> <%= weather.weather[0].main %>: <%= weather.weather[0].description %></div>
+          <div style="float: left; width: 160px; border: 3px solid burlywood;"> 
             <div style="display: block; clear: left;"> 
               <div style="float: left;" title="Titel"> 
-                <img height="45" width="45" style="border: medium none; width: 45px; height: 45px; background: url(&quot;http://openweathermap.org/img/w/<%=weather.weather[0].icon %>.png&quot;) repeat scroll 0% 0% transparent;" alt="title" src="http://openweathermap.org/images/transparent.png"/>
+                <img height="45" width="45" style="border: large none; width: 45px; height: 45px; background: url(&quot;http://openweathermap.org/img/w/<%=weather.weather[0].icon %>.png&quot;) repeat scroll 0% 0% transparent;" alt="title" src="http://openweathermap.org/images/transparent.png"/>
               </div>
               <div style="float: left;"> 
-                <div style="display: block; clear: left; font-size: medium; font-weight: bold; padding: 0pt 3pt;" title="Current Temperature"><%= weather.main.temp%>°C</div>
+                <div style="display: block; clear: left; font-size: large; font-weight: bold; padding: 0pt 3pt;" title="Current Temperature"><%= weather.main.temp%>°C</div>
                 <div style="display: block; width: 85px; overflow: visible;"></div> 
               </div> 
             </div> 
             <div style="display: block; clear: left; font-size: small;">Clouds: <%= weather.clouds.all%>%</div> 
-            <div style="display: block; clear: left; color: gray; font-size: x-small;" >Humidity: <%= weather.main.humidity %>%</div> 
-            <div style="display: block; clear: left; color: gray; font-size: x-small;" >Wind: <%= weather.main.humidity %> m/s</div> 
-            <div style="display: block; clear: left; color: gray; font-size: x-small;">Feels like:<%= weather.main.feels_like%> 'C</div>
-            <div style="display: block; clear: left; color: gray; font-size: x-small;">Max Temp:<%= weather.main.temp_max%> 'C</div>
-            <div style="display: block; clear: left; color: gray; font-size: x-small;">Min Temp:<%= weather.main.temp_min%> 'C</div>
+            <div style="display: block; clear: left; color: gray; font-size: medium;" >Humidity: <%= weather.main.humidity %>%</div> 
+            <div style="display: block; clear: left; color: gray; font-size: medium;" >Wind: <%= weather.main.humidity %> m/s</div> 
+            <div style="display: block; clear: left; color: gray; font-size: medium;">Feels like:<%= weather.main.feels_like%> 'C</div>
+            <div style="display: block; clear: left; color: gray; font-size: medium;">Max Temp:<%= weather.main.temp_max%> 'C</div>
+            <div style="display: block; clear: left; color: gray; font-size: medium;">Min Temp:<%= weather.main.temp_min%> 'C</div>
           </div>
         </div>
       </div>
@@ -49,10 +51,10 @@
 
 
   <div class="uk-position-bottom-center">
+    
     <p uk-margin >
-      <a class="uk-button uk-button-primary" href=".\matches">Go to Matches Schedules</a> 
-      
-  
+      <p>This is the gate to the website: come in  </p>
+        <a class="uk-button uk-button-primary" href=".\matches">Go to Matches Schedules</a>  
     </p>
   </div>
   <div class="uk-position-top-center">

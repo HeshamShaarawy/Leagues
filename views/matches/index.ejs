@@ -49,8 +49,8 @@
                 <td><%= m.court[0].location  %> </td>
                 <td><a href="/teams/<%= m.team1[0]._id%>"> <%= m.team1[0].name %> </a></td>
                 <td><a href="/teams/<%= m.team2[0]._id%>"> <%= m.team2[0].name %>  </a></std>
-                <td><a  uk-icon="icon: pencil" href="/matches/edit/<%=  m.id %>"  >Edit </a></td>
-                <td  uk-icon="icon: trash"><a  href="/matches/delete/<%=  m.id %>"> Delete </a></td>
+                <td><a  uk-icon="icon: pencil" href="/matches/edit/<%=  m.id %>"></a></td>
+                <td  ><form method="POST" action="/matches/delete/<%=  m.id %>?_method=DELETE"><button type="submit" uk-icon="icon: trash"></form></td> 
             </tr>
             <% }) %>
         </tbody>

@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 <h4> Edit Match Information</h4>
-
+<%= match.date%>
 
 <table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
     <thead>
@@ -20,21 +20,22 @@
             <td><%= match.court[0].location  %> </td>
             <td><a href="/teams/<%= match.team1[0]._id%>"> <%= match.team1[0].name %></a></td>
             <td><a href="/teams/<%= match.team2[0]._id%>"> <%= match.team2[0].name %>  </a></std>
-            <td  uk-icon="icon: trash"><a  href="/matches/delete/<%=  match.id %>"> Delete </a></td> 
+            <td  ><form method="POST" action="/matches/delete/<%=  match.id %>?_method=DELETE"><button type="submit" uk-icon="icon: trash"></form></td> 
+                
         </tr>
     </tbody>
 </table>
 
 
-<form action ="/matches/<%=match.id%>"?_method=PUT method="post" class="uk-form-stacked">
+<form action ="/matches/<%=match.id%>?_method=PUT" method="POST"  class="uk-form-stacked">
     <label> Date
-        <input type="datetime-local" name="date"  %> >
+        <input type="datetime-local" name="date">
     </label>
     <label> Court : 
         <select name="court" >
             <% courts.forEach(function(c) { %>
             
-            <option value="<%= c._id %>"> court: <%= c.location %> - <%c.courtType%> </option>
+            <option selected="<%= match.court[0].location  %>" value="<%= c._id %>"> court: <%= c.location %> - <%c.courtType%> </option>
            
             <% }) %>
         </select>
@@ -42,14 +43,14 @@
     <label> Home Team
         <select name="team1">
             <% teams.forEach(function(t){ %>
-                <option value="<%=t._id%>">team : <%=t.name%></option>
+                <option selected="<%= match.team1[0].name %>"  value="<%=t._id%>">team : <%=t.name%> </option>
             <% }) %>
         </select>
     </label>
     <label> Away Team
         <select name="team2">
             <% teams.forEach(function(t){ %>
-                <option value="<%=t._id%>">team : <%=t.name%></option>
+                <option selected="<%= match.team2[0].name %>" value="<%=t._id%>">team : <%=t.name%></option>
             <% }) %>
         </select>
     </label>
