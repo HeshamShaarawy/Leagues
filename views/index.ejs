@@ -22,7 +22,7 @@
           <div >Now the weather is:<br> <%= weather.weather[0].main %>: <%= weather.weather[0].description %></div>
           <div style="float: left; width: 160px; border: 3px solid burlywood;"> 
             <div style="display: block; clear: left;"> 
-              <div style="float: left;" title="Titel"> 
+              <div style="float: left;" title="Title"> 
                 <img height="45" width="45" style="border: large none; width: 45px; height: 45px; background: url(&quot;http://openweathermap.org/img/w/<%=weather.weather[0].icon %>.png&quot;) repeat scroll 0% 0% transparent;" alt="title" src="http://openweathermap.org/images/transparent.png"/>
               </div>
               <div style="float: left;"> 
@@ -30,12 +30,13 @@
                 <div style="display: block; width: 85px; overflow: visible;"></div> 
               </div> 
             </div> 
-            <div style="display: block; clear: left; font-size: small;">Clouds: <%= weather.clouds.all%>%</div> 
-            <div style="display: block; clear: left; color: gray; font-size: medium;" >Humidity: <%= weather.main.humidity %>%</div> 
-            <div style="display: block; clear: left; color: gray; font-size: medium;" >Wind: <%= weather.main.humidity %> m/s</div> 
-            <div style="display: block; clear: left; color: gray; font-size: medium;">Feels like:<%= weather.main.feels_like%> 'C</div>
-            <div style="display: block; clear: left; color: gray; font-size: medium;">Max Temp:<%= weather.main.temp_max%> 'C</div>
-            <div style="display: block; clear: left; color: gray; font-size: medium;">Min Temp:<%= weather.main.temp_min%> 'C</div>
+            <div style="display: block; clear: left; font-size: small;">Clouds:.......... <%= weather.clouds.all%>%</div> 
+            <div style="display: block; clear: left; color: gray; font-size: medium;" >Humidity:.. <%= weather.main.humidity %>%</div> 
+            <div style="display: block; clear: left; color: gray; font-size: medium;" >Wind: ......  <%= weather.wind.speed %> m/s</div> 
+            <div style="display: block; clear: left; color: gray; font-size: medium;">Feels like:..<%= weather.main.feels_like%> °C</div>
+            <div style="display: block; clear: left; color: gray; font-size: medium;">Max Temp:..<%= weather.main.temp_max%> °C</div>
+            <div style="display: block; clear: left; color: gray; font-size: medium;">Min Temp:..<%= weather.main.temp_min%> °C</div>
+            
           </div>
         </div>
       </div>
@@ -43,7 +44,6 @@
     </div>
     
   
-    
  
       <div class="uk-position-center">
         <iframe  width="560" height=315 src="https://www.youtube-nocookie.com/embed/wy2rzdHVOMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
