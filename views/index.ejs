@@ -1,14 +1,14 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/css/uikit.min.css" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-    <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit-icons.min.js"></script>
+   
 
   </head>
   <body>
@@ -16,7 +16,7 @@
       <div class="uk-position-center-left" style="margin: 30px;"> 
       <div class="uk-flex uk-flex-center">
         <div>
-          
+         <% if (weather.weather){ %>  
           <p>Live weather data: <br>empowered by openweathermap API</p>  
           <div style="font-size: large; font-weight: bold; margin-bottom: 0px;"><%= weather.name%></div> 
           <div >Now the weather is:<br> <%= weather.weather[0].main %>: <%= weather.weather[0].description %></div>
@@ -38,6 +38,7 @@
             <div style="display: block; clear: left; color: gray; font-size: medium;">Min Temp:..<%= weather.main.temp_min%> °C</div>
             
           </div>
+          <%} %>
         </div>
       </div>
     </div>   
@@ -70,5 +71,8 @@
     
 
   </body>
+   <!-- UIkit JS -->
+   <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/uikit@3.7.2/dist/js/uikit-icons.min.js"></script>
 </html>
 

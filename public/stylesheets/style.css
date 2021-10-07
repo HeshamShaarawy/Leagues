@@ -1,10 +1,5 @@
 body {
+  
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-@media screen and(max-width: 1400 px) {
-  .uk-flex-center {
-    top: 120%;
-  } 
-  
 }

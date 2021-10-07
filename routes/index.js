@@ -1,8 +1,8 @@
 var router = require('express').Router();
 var passport= require('passport');
+var weather = {}
 var unirest = require("unirest");
 var req = unirest("GET", "https://community-open-weather-map.p.rapidapi.com/weather");
-var weather = "weather"
 
 
 req.query({
@@ -24,14 +24,15 @@ req.headers({
 
 
 req.end(function (res) {
-  if (res.error) throw new Error(res.error);
+ // if (res.error) throw new Error(res.error);
   weather = res.body
+  console.log(weather)
 });
 
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express', weather });
+  res.render('index', { title: 'Express', weather});
 });
 
 // Google OAuth login route

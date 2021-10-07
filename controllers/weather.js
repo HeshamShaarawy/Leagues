@@ -22,13 +22,12 @@ req.headers({
 
 
 req.end(function (res) {
-  if (res.error) throw new Error(res.error);
+  //if (res.error) throw new Error(res.error);
   weather = res.body
 });
 
 
 function showWeather(req, res){
-    console.log(weather)
     res.render('weather/weather',{weather})
 }
 
@@ -36,6 +35,3 @@ function showWeather(req, res){
 module.exports ={
     showWeather
 }
-
-
-
